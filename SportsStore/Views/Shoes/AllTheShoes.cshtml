@@ -1,0 +1,53 @@
+﻿@using SportsStore.Models;
+
+<h2>AllTheShoes</h2>
+
+<button onclick="">click to change </button>
+@foreach (Shoe shoe in @ViewBag.Shoes)
+{
+    <div width="100%">
+        <section width="50%">
+            <h3>ShoeType : @shoe.ShoeType</h3>
+            <h3>Company : @shoe.Company</h3>
+            <h3>Model : @shoe.Model</h3>
+            <h3>Price : @shoe.Price</h3>
+            <h3>Amount : @shoe.Amount</h3>
+            <h3>IsSale : @shoe.IsSale</h3>
+            <img src="@shoe.Img" width="200px" height="100px"/>
+            <hr />
+        </section>
+    </div>
+}
+<style>
+    table, th, td {
+        border: 2px solid black;
+    }
+</style>
+<div id="Table">
+    <table width="100%">
+        <tr >
+            <th>ShoeType</th>
+            <th>Company</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>IsSale</th>
+            <th>Img</th>
+        </tr>
+        <tr>
+            @foreach (Shoe shoe in @ViewBag.Shoes)
+            {
+
+                <td>@shoe.ShoeType</td>
+                <td>@shoe.Company</td>
+                <td>@shoe.Model</td>
+                <td>@shoe.Price</td>
+                <td>@shoe.Amount</td>
+                <td>@shoe.IsSale</td>
+                <td><img src="@shoe.Img" width="40px" height="40px" /></td>
+            <tr />
+}
+            <table />
+    </div>
+
+
