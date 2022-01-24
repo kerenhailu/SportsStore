@@ -19,9 +19,13 @@ namespace SportsStore.Controllers
         {
             List<Shoe> listShoes= dbContext.Shoes.ToList();
             ViewBag.Shoes = listShoes;
-            ViewBag.button = true;
             return View();
         }
-
+        public ActionResult ShowTable()
+        {
+            List<Shoe> listShoes = dbContext.Shoes.ToList();
+            ViewBag.Shoes = listShoes;
+            return View();
+        }
     }
 }
