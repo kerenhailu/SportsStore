@@ -14,6 +14,7 @@ namespace SportsStore.Controllers.API
         // GET: api/Clothing
         public IHttpActionResult Get()
         {
+//ss
             List<Clothing>ListClothing= dbContext.Clothings.ToList();
             return Ok(new { ListClothing });
         }
