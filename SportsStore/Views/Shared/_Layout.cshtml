@@ -7,6 +7,15 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
+<style>
+    @*.nav navbar-nav {
+        background: rgb(250, 238, 224)
+    }*@
+    footer {
+        background: linear-gradient(rgb(249, 228, 200),rgb(250, 238, 224));
+        padding:5%;
+    }
+</style>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -18,11 +27,10 @@
                 </button>
                 @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
                 @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Clothing", "", "", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Shirt", "ShirtCard", "Shirt", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Pants", "", "", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Shoes", "AllTheShoes", "Shoes", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("SportsEquipment", "", "", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Pants", "CardOfPants", "Pants", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Shoes", "CardShoes", "Shoes", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("SportsEquipment", "SportsEquipmentCard", "SportsEquipment", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
 
             </div>
@@ -47,7 +55,7 @@
             <a style="color:black" href="https://api.whatsapp.com/send?phone=9720543401404">WhatsApp</a>
 
             <hr />
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            @*<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
         </footer>
     </div>
 

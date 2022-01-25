@@ -16,7 +16,7 @@
     #Card {
         font-size: large;
         width: 40vh;
-        height: 50vh;
+        height: 60vh;
         box-shadow: 5px 5px 5px rgb(202, 150, 92);
         background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));
         margin: 2%;
@@ -47,18 +47,19 @@
                 height: 5%;
             }*@
 </style>
-<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to All the Card </button>
+<button type="button" onclick="location.href = '@Url.Action("CardOfPants","Pants")'">click All Pants </button>
 
 <div id="DivCard">
-@foreach (Clothing shirt in @ViewBag.LongShirts)
-{
+    @foreach (Clothing pants in @ViewBag.shortPants)
+    {
     <section id="Card">
         <br />
-        <h4>Type : @shirt.ClothType</h4>
-        <h4>Company : @shirt.Company</h4>
-        <h4>Price : @shirt.Price</h4>
+        <h4>Type : @pants.ClothType</h4>
+        <h4>Company : @pants.Company</h4>
+        <h4>Price : @pants.Price</h4>
         <br />
-        <img src="@shirt.Img" />
+        <img src="@pants.Img" />
     </section>
     }
 </div>
+

@@ -1,11 +1,11 @@
 ﻿@using SportsStore.Models;
 
 
-<h2> Table of Shirt</h2>
-<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to change </button>
+<h2> Table of Pants</h2>
+<button type="button" onclick="location.href = '@Url.Action("CardOfPants","Pants")'">click to change </button>
 
 <style>
-    #TableShirt {
+    #TablePants {
         width: 90%;
         border-collapse: collapse;
         margin-left: 10%;
@@ -13,19 +13,19 @@
         padding: 10%;
         margin:3%;
     }
-    #TableShirt,
+    #TablePants,
     th,
     td {
         text-align: center;
         border: 1px solid black;
         background-color: rgb(245, 238, 230);
     }
-    #TableShirt,
+    #TablePants,
     th {
         height: 50px;
     }
 
-        #TableShirt tr {
+        #TablePants tr {
             border: 3px solid black;
         }
 
@@ -33,8 +33,8 @@
         border:none;
     }*@
 </style>
-<div >
-    <table id="TableShirt">
+<div>
+    <table id="TablePants">
         <tr>
             <th>ClothModel</th>
             <th>Company</th>
@@ -46,22 +46,19 @@
             <th>Img</th>
         </tr>
         <tr>
-            @foreach (Clothing shirt in @ViewBag.ListShirt)
+            @foreach (Clothing pants in @ViewBag.ListPants)
             {
-                <td>@shirt.ClothModel</td>
-                <td> @shirt.Company</td>
-                <td>@shirt.IsShort</td>
-                <td>@shirt.Price</td>
-                <td> @shirt.Amount</td>
-                <td> @shirt.IsDreyfit</td>
-                <td> @shirt.Gender</td>
-                <td><img src="@shirt.Img" width="100px" height="40px" /></td>
-<tr />
+                <td>@pants.ClothModel</td>
+                <td> @pants.Company</td>
+                <td>@pants.IsShort</td>
+                <td>@pants.Price</td>
+                <td> @pants.Amount</td>
+                <td> @pants.IsDreyfit</td>
+                <td> @pants.Gender</td>
+                <td><img src="@pants.Img" width="100px" height="40px" /></td>
+            <tr />
         }
             <table />
 
     </div>
-
-
- 
 

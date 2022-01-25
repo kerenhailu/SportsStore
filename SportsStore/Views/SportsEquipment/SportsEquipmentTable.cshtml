@@ -1,0 +1,72 @@
+﻿@using SportsStore.Models;
+@{
+    ViewBag.Title = "ShowTable";
+}
+<h1>The table shoes : </h1>
+<style>
+    #TableShoes {
+        width: 90%;
+        border-collapse: collapse;
+        margin-left: 10%;
+        margin-bottom: 1%;
+        padding: 10%;
+        margin:3%;
+    }
+    #TableShoes,
+    th,
+    td {
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgb(245, 238, 230);
+    }
+
+    #TableShoes,
+    th {
+        height: 50px;
+    }
+
+        #TableShoes tr {
+            border: 3px solid black;
+        }
+
+    @*button {
+        border:none;
+    }*@
+</style>
+<div>
+    <table id="TableShoes">
+        <tr>
+            <th>Name</th>
+            <th>sportType</th>
+            <th>Company</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Model</th>
+            <th>Img</th>
+        </tr>
+        <tr>
+
+            @foreach (SportsEquipment SportsEquipment in @ViewBag.SportsEquipment)
+            {
+                <td>@SportsEquipment.ProductName</td>
+                <td>@SportsEquipment.sportType</td>
+                <td>@SportsEquipment.Company</td>
+                <td>@SportsEquipment.Price</td>
+                <td>@SportsEquipment.Amount</td>
+                <td>@SportsEquipment.ModelProduct</td>
+                <td><img src="@SportsEquipment.Img" width="40px" height="40px" /></td>
+            <tr />
+        }
+            <table />
+
+    </div>
+    <br />
+    <button type="button" onclick="location.href = '@Url.Action("SportsEquipmentCard","SportsEquipment")'">Show Card </button>
+    <h2>AllTheShoes</h2>
+    <style>
+        body {
+            background-color: rgb(238, 195, 115);
+        }
+    </style>
+    </div>
+

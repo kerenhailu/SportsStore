@@ -7,7 +7,7 @@
         background-color: rgb(238, 195, 115);
     }
 
-    #cardSection {
+    #Divcard {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -50,20 +50,15 @@
             }*@
 </style>
 <button type="button" onclick="location.href = '@Url.Action("TableShoes","Shoes")'">Show table </button>
-<div id="cardSection">
+<div id="Divcard">
     @foreach (Shoe shoe in @ViewBag.Shoes)
     {
-
         <section id="card">
             <h4>ShoeType : @shoe.ShoeType</h4>
             <h4>Company : @shoe.Company</h4>
-            <h4>Model : @shoe.Model</h4>
             <h4>Price : @shoe.Price</h4>
-            <h4>Amount : @shoe.Amount</h4>
-            <h4>IsSale : @shoe.IsSale</h4><br />
-            <img src="@shoe.Img" />
+             <img src="@shoe.Img" />
         </section>
-
     }
 
 </div>

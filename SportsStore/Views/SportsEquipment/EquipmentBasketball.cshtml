@@ -1,11 +1,13 @@
 ﻿@using SportsStore.Models;
 
+
+<h2>AllTheShoes</h2>
 <style>
     body {
         background-color: rgb(238, 195, 115);
     }
 
-    #DivCard {
+    #Divcard {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -13,10 +15,10 @@
         justify-content: space-between;
     }
 
-    #Card {
+    #card {
         font-size: large;
         width: 40vh;
-        height: 50vh;
+        height: 60vh;
         box-shadow: 5px 5px 5px rgb(202, 150, 92);
         background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));
         margin: 2%;
@@ -29,7 +31,7 @@
             width: 5%;
             height: 5%;
         }*@
-        #Card img {
+        #card img {
             width: 60%;
             height: 40%;
             border-radius: 10%;
@@ -47,18 +49,19 @@
                 height: 5%;
             }*@
 </style>
-<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to All the Card </button>
-
-<div id="DivCard">
-@foreach (Clothing shirt in @ViewBag.LongShirts)
-{
-    <section id="Card">
+<button type="button" onclick="location.href = '@Url.Action("SportsEquipmentCard","SportsEquipment")'">Show Card </button>
+<div id="Divcard">
+    @foreach (SportsEquipment SportsEquipment in @ViewBag.Basketball)
+    {
+    <section id="card">
         <br />
-        <h4>Type : @shirt.ClothType</h4>
-        <h4>Company : @shirt.Company</h4>
-        <h4>Price : @shirt.Price</h4>
+        <h4>ShoeType : @SportsEquipment.sportType</h4>
+        <h4>Company : @SportsEquipment.Company</h4>
+        <h4>Price : @SportsEquipment.Price</h4>
         <br />
-        <img src="@shirt.Img" />
+        <img src="@SportsEquipment.Img" />
     </section>
     }
+
 </div>
+

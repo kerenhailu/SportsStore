@@ -50,6 +50,13 @@ namespace SportsStore.Controllers
             ViewBag.DreyfitShirts = ListDreyfitShirt;
             return View();
         }
+        public ActionResult SortShirt()
+        {
+            List<Clothing> ListShirt = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
+            List<Clothing> ListShirtSort =ListShirt.OrderBy(item => item.Price).ToList();
+            ViewBag.ListShirtSort = ListShirtSort;
+            return View();
+        }
 
     }
 }

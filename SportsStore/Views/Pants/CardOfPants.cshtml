@@ -1,5 +1,4 @@
 ﻿@using SportsStore.Models;
-
 <style>
     body {
         background-color: rgb(238, 195, 115);
@@ -47,11 +46,19 @@
                 height: 5%;
             }*@
 </style>
-<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to All the Card </button>
+
+
+<h2>Shirt Card</h2>
+
+<button type="button" onclick="location.href = '@Url.Action("TableOfPants","Pants")'">click to Table </button>
+<button type="button" onclick="location.href = '@Url.Action("LongPants","Pants")'">click to LongPants </button>
+<button type="button" onclick="location.href = '@Url.Action("shortPants","Pants")'">click to shortPants </button>
+<button type="button" onclick="location.href = '@Url.Action("DreyfitPants","Pants")'">click to DreyfitPants </button>
+<button type="button" onclick="location.href = '@Url.Action("shortPants","Pants")'">click to shortPants </button>
 
 <div id="DivCard">
-@foreach (Clothing shirt in @ViewBag.LongShirts)
-{
+    @foreach (Clothing shirt in @ViewBag.ListPants)
+    {
     <section id="Card">
         <br />
         <h4>Type : @shirt.ClothType</h4>
@@ -62,3 +69,4 @@
     </section>
     }
 </div>
+
