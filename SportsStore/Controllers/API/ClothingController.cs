@@ -14,7 +14,6 @@ namespace SportsStore.Controllers.API
         // GET: api/Clothing
         public IHttpActionResult Get()
         {
-//ss
             List<Clothing>ListClothing= dbContext.Clothings.ToList();
             return Ok(new { ListClothing });
         }
@@ -48,6 +47,7 @@ namespace SportsStore.Controllers.API
             clothingToChange.Gender=clothing.Gender;
             clothingToChange.ClothType=clothing.ClothType;
             clothingToChange.Company=clothing.Company;
+            dbContext.SubmitChanges();
             return Ok("you update");
         }
 

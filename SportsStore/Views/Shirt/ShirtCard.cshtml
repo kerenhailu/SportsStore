@@ -1,0 +1,30 @@
+﻿@using SportsStore.Models;
+<style>
+   
+</style>
+
+
+<h2>Shirt Card</h2>
+
+<button type="button" onclick="location.href = '@Url.Action("ShirtTable","Shirt")'">click to Table </button>
+<button type="button" onclick="location.href = '@Url.Action("LongShirt","Shirt")'">click to LongShirt </button>
+<button type="button" onclick="location.href = '@Url.Action("TShirt","Shirt")'">click to TShirt </button>
+<button type="button" onclick="location.href = '@Url.Action("DreyfitShirt","Shirt")'">click to DreyfitShirts </button>
+
+@foreach (Clothing shirt in @ViewBag.Card)
+{
+    <div width="100%">
+        <section width="50%">
+            <h3>ClothModel : @shirt.ClothModel</h3>
+            <h3>Company : @shirt.Company</h3>
+            <h3>IsShort : @shirt.IsShort</h3>
+            <h3>Price : @shirt.Price</h3>
+            <h3>Amount : @shirt.Amount</h3>
+            <h3>IsDreyfit : @shirt.IsDreyfit</h3>
+            <h3>Gender : @shirt.Gender</h3>
+            <img src="@shirt.Img" width="100px" height="40px" />
+            <hr />
+        </section>
+    </div>
+}
+

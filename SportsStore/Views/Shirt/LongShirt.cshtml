@@ -1,0 +1,20 @@
+﻿@using SportsStore.Models;
+<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to All the Card </button>
+
+@foreach (Clothing shirt in @ViewBag.LongShirts)
+{
+    <div width="100%">
+        <section width="50%">
+            <h3>ClothModel : @shirt.ClothModel</h3>
+            <h3>Company : @shirt.Company</h3>
+            <h3>IsShort : @shirt.IsShort</h3>
+            <h3>Price : @shirt.Price</h3>
+            <h3>Amount : @shirt.Amount</h3>
+            <h3>IsDreyfit : @shirt.IsDreyfit</h3>
+            <h3>Gender : @shirt.Gender</h3>
+            <img src="@shirt.Img" width="100px" height="40px" />
+            <hr />
+        </section>
+    </div>
+}
+

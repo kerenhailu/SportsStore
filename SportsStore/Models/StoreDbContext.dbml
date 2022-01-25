@@ -26,4 +26,25 @@
       <Column Name="Img" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SportsEquipment" Member="SportsEquipments">
+    <Type Name="SportsEquipment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sportType" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ModelProduct" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdOfTheGroup" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Img" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Team_SportsEquipment" Member="Team" ThisKey="IdOfTheGroup" OtherKey="Id" Type="Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Team" Member="Teams">
+    <Type Name="Team">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NameOfTheTeam" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Association Name="Team_SportsEquipment" Member="SportsEquipments" ThisKey="Id" OtherKey="IdOfTheGroup" Type="SportsEquipment" />
+    </Type>
+  </Table>
 </Database>

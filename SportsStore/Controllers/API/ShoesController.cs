@@ -46,6 +46,7 @@ namespace SportsStore.Controllers.API
             shoesToChange.Price = shoes.Price;
             shoesToChange.ShoeType = shoes.ShoeType;
             shoesToChange.Model = shoes.Model;
+            dbContext.SubmitChanges();
             return Ok("you upDate");
         }
 

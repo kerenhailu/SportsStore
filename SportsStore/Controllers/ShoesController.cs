@@ -15,17 +15,23 @@ namespace SportsStore.Controllers
         {
             return View();
         }
-        public ActionResult AllTheShoes()
-        {
-            List<Shoe> listShoes= dbContext.Shoes.ToList();
-            ViewBag.Shoes = listShoes;
-            return View();
-        }
-        public ActionResult ShowTable()
+        public ActionResult CardShoes()
         {
             List<Shoe> listShoes = dbContext.Shoes.ToList();
             ViewBag.Shoes = listShoes;
             return View();
         }
+        public ActionResult TableShoes()
+        {
+            List<Shoe> listShoes = dbContext.Shoes.ToList();
+            ViewBag.Shoes = listShoes;
+            return View();
+        }
+        //public ActionResult CardShoesByInput()
+        //{
+        //    List<Shoe> listShoes = dbContext.Shoes.ToList();
+        //    ViewBag.Shoes = listShoes;
+        //    return View();
+        //}
     }
 }

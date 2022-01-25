@@ -22,7 +22,7 @@ namespace SportsStore.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact : ";
 
             return View();
         }

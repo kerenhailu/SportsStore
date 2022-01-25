@@ -144,7 +144,9 @@
     <Compile Include="Controllers\API\PantsController.cs" />
     <Compile Include="Controllers\API\ShirtController.cs" />
     <Compile Include="Controllers\API\ShoesController.cs" />
+    <Compile Include="Controllers\API\SportsEquipmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ShirtController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -200,8 +202,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shoes\AllTheShoes.cshtml" />
-    <Content Include="Views\Shoes\ShowTable.cshtml" />
+    <Content Include="Views\Shirt\ShirtTable.cshtml" />
+    <Content Include="Views\Shirt\ShirtCard.cshtml" />
+    <Content Include="Views\Shirt\LongShirt.cshtml" />
+    <Content Include="Views\Shirt\TShirt.cshtml" />
+    <Content Include="Views\Shirt\DreyfitShirt.cshtml" />
+    <Content Include="Views\Shoes\CardShoes.cshtml" />
+    <Content Include="Views\Shoes\TableShoes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

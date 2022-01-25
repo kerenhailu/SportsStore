@@ -1,0 +1,43 @@
+﻿@using SportsStore.Models;
+
+
+<h2> Table of Shirt</h2>
+<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to change </button>
+
+<style>
+    table, th, td {
+        border: 2px solid black;
+    }
+</style>
+<div id="Table">
+    <table width="100%">
+        <tr>
+            <th>ClothModel</th>
+            <th>Company</th>
+            <th>IsShort</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>IsDreyfit</th>
+            <th>Gender</th>
+            <th>Img</th>
+        </tr>
+        <tr>
+            @foreach (Clothing shirt in @ViewBag.ListShirt)
+            {
+                <td>@shirt.ClothModel</td>
+                <td> @shirt.Company</td>
+                <td>@shirt.IsShort</td>
+                <td>@shirt.Price</td>
+                <td> @shirt.Amount</td>
+                <td> @shirt.IsDreyfit</td>
+                <td> @shirt.Gender</td>
+                <td><img src="@shirt.Img" width="100px" height="40px" /></td>
+<tr />
+        }
+            <table />
+
+    </div>
+
+
+ 
+

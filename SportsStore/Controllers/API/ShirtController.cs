@@ -48,6 +48,7 @@ namespace SportsStore.Controllers.API
             shirtToChange.Price = shirt.Price;
             shirtToChange.Img = shirtToChange.Img;
             shirtToChange.Company = shirtToChange.Company;
+            dbContext.SubmitChanges();
             //shirtToChange.ClothType = shirtToChange.ClothType;
             return Ok("you upDate");
         }

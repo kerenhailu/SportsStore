@@ -1,0 +1,70 @@
+﻿@using SportsStore.Models;
+
+
+<h2>AllTheShoes</h2>
+<style>
+    body {
+        background-color: rgb(238, 195, 115);
+    }
+
+    #cardSection {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #card {
+        font-size: large;
+        width: 40vh;
+        height: 60vh;
+        box-shadow: 5px 5px 5px rgb(202, 150, 92);
+        background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));
+        margin: 2%;
+        /* border: 6px solid rgb(226, 22, 15); */
+        text-align: center;
+        border-radius: 10%;
+        transition: 2s;
+    }
+        @*#card:hover {
+            width: 5%;
+            height: 5%;
+        }*@
+        #card img {
+            width: 60%;
+            height: 40%;
+            border-radius: 10%;
+        }
+
+        button {
+            background-color: rgb(238, 195, 115);
+            font-weight: bold;
+            border: none;
+            font-size: large;
+            transition: 2s;
+        }
+            @*button:hover {
+                width: 5%;
+                height: 5%;
+            }*@
+</style>
+<button type="button" onclick="location.href = '@Url.Action("TableShoes","Shoes")'">Show table </button>
+<div id="cardSection">
+    @foreach (Shoe shoe in @ViewBag.Shoes)
+    {
+
+        <section id="card">
+            <h4>ShoeType : @shoe.ShoeType</h4>
+            <h4>Company : @shoe.Company</h4>
+            <h4>Model : @shoe.Model</h4>
+            <h4>Price : @shoe.Price</h4>
+            <h4>Amount : @shoe.Amount</h4>
+            <h4>IsSale : @shoe.IsSale</h4><br />
+            <img src="@shoe.Img" />
+        </section>
+
+    }
+
+</div>
+
