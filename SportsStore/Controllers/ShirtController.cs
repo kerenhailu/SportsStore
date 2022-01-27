@@ -25,8 +25,8 @@ namespace SportsStore.Controllers
         public ActionResult ShirtCard()
         {
             List<Clothing> ListShirt = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            ViewBag.Card = ListShirt;
-            return View();
+            
+            return View(ListShirt);
         }
         public ActionResult LongShirt()
         {

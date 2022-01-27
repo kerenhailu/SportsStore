@@ -57,8 +57,33 @@
 <button type="button" onclick="location.href = '@Url.Action("DreyfitShirt","Shirt")'">click to DreyfitShirts </button>
 <button type="button" onclick="location.href = '@Url.Action("SortShirt","Shirt")'">click to Sort Shirts </button>
 
+<select id="shirts">
+    <option class="option" value="card">card</coption>
+    <option value="longShirt">longShirt</option>
+    <option value="DreyfitShirts">DreyfitShirts</option>
+    <option value="sort">sort</option>
+    <option value="table">table</option>
+</select>
+
+
+@*@switch ()
+{
+    case "card" :
+        <h1>card</h1>
+        break;
+    case "longShirt":
+        <h1>longg</h1>
+    case "DreyfitShirts":
+<h1>DreyfitShirts</h1>
+        break;
+    default:
+<h1>aaaa</h1>
+        break;
+
+}*@
+
 <div id="DivCard">
-    @foreach (Clothing shirt in @ViewBag.Card)
+    @foreach (Clothing shirt in @Model)
     {
         <section id="Card">
             <br />
