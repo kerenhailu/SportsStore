@@ -11,10 +11,24 @@
     @*.nav navbar-nav {
         background: rgb(250, 238, 224)
     }*@
-    footer {
-        background: linear-gradient(rgb(249, 228, 200),rgb(250, 238, 224));
-        padding:5%;
+    body {
+        background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));
     }
+    footer {
+        @*background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));*@
+        padding: 5%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 23px;
+
+    }
+    @*#SecOfFooter a {
+        transition: 2s;
+    }
+        #SecOfFooter a :hover {
+            font-size: 25px;
+            color: red;
+        }*@
 </style>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -38,9 +52,9 @@
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
                     @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                     @*<li>@Html.ActionLink("Shirt", "ShirtCard", "Shirt")</li>
-                    <li>@Html.ActionLink("Shoes", "AllTheShoes", "Shoes")</li>*@
+                        <li>@Html.ActionLink("Shoes", "AllTheShoes", "Shoes")</li>*@
                 </ul>
             </div>
         </div>
@@ -48,19 +62,20 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer >
-            <a style="color:black" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">Keren4509@gmail.com</a>
-            <a style="color:black" href="https://github.com/kerenhailu">Github</a>
-            <a style="color:black" href="https://www.linkedin.com/in/keren-hailu-58bb07218/">Linkedin</a>
-            <a style="color:black" href="https://api.whatsapp.com/send?phone=9720543401404">WhatsApp</a>
-
-            <hr />
+        <footer>
+            <section id="SecOfFooter">
+                | <a style="color:black" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Gmail_2020.png" width="24px" height="24px" /> Email</a>
+                | <a style="color:black" href="https://github.com/kerenhailu" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="24px" height="24px" /> Github</a>
+                |   <a style="color:black" href="https://www.linkedin.com/in/keren-hailu-58bb07218/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png" width="24px" height="24px" /> Linkedin</a>
+                | <a style="color:black" href="https://api.whatsapp.com/send?phone=9720543401404" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" width="24px" height="24px" />WhatsApp</a>
+            </section>
+            
             @*<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @RenderSection("scripts", required: false)*@
 </body>
 </html>
