@@ -48,21 +48,27 @@
             }*@
 </style>
 
-<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to All the Card </button>
 <h1>Short T-Shirt</h1>
+<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">Shirt Card </button>
+<button type="button" onclick="location.href = '@Url.Action("ShirtTable","Shirt")'">Shirt Table </button>
+<button type="button" onclick="location.href = '@Url.Action("LongShirt","Shirt")'">Long Shirt </button>
+<button type="button" onclick="location.href = '@Url.Action("DreyfitShirt","Shirt")'">Dreyfit Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("SortShirt","Shirt")'">Sort Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("MaleShirt","Shirt")'">Male Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("FemaleShirt","Shirt")'">Female Shirts </button>
 <div id="DivCard">
     @foreach (Clothing shirt in @Model)
     {
 
-    <section id="Card">
-        <br />
-        <h4>Type : @shirt.ClothType</h4>
-        <h4>Company : @shirt.Company</h4>
-        <h4>Price : @shirt.Price</h4>
-        <br />
-        <img src="@shirt.Img" />
+        <section id="Card">
+            <br />
+            <h4>Type : @shirt.ClothType</h4>
+            <h4>Company : @shirt.Company</h4>
+            <h4>Price : @shirt.Price</h4>
+            <br />
+            <img src="@shirt.Img" />
 
-    </section>
+        </section>
 
     }
 

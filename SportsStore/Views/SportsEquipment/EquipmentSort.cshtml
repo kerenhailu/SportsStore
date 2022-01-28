@@ -1,7 +1,5 @@
 ﻿@using SportsStore.Models;
 
-
-<h2>AllTheShoes</h2>
 <style>
     body {
         background-color: rgb(238, 195, 115);
@@ -18,7 +16,7 @@
     #card {
         font-size: large;
         width: 40vh;
-        height: 60vh;
+        height: 50vh;
         box-shadow: 5px 5px 5px rgb(202, 150, 92);
         background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));
         margin: 2%;
@@ -49,18 +47,22 @@
                 height: 5%;
             }*@
 </style>
+<h1><h1>Equipment Sort</h1></h1>
 <button type="button" onclick="location.href = '@Url.Action("SportsEquipmentCard","SportsEquipment")'">Show Card </button>
+<button type="button" onclick="location.href = '@Url.Action("SportsEquipmentTable","SportsEquipment")'">Show table </button>
+<button type="button" onclick="location.href = '@Url.Action("EquipmentBasketball","SportsEquipment")'">click To SportsEquipment Basketball</button>
+<button type="button" onclick="location.href = '@Url.Action("EquipmentFootball","SportsEquipment")'">click To SportsEquipment Football</button>
 <div id="Divcard">
     @foreach (SportsEquipment SportsEquipment in @Model)
     {
-    <section id="card">
-        <br />
-        <h4>ShoeType : @SportsEquipment.sportType</h4>
-        <h4>Company : @SportsEquipment.Company</h4>
-        <h4>Price : @SportsEquipment.Price</h4>
-        <br />
-        <img src="@SportsEquipment.Img" />
-    </section>
+        <section id="card">
+            <br />
+            <h4>ShoeType : @SportsEquipment.sportType</h4>
+            <h4>Company : @SportsEquipment.Company</h4>
+            <h4>Price : @SportsEquipment.Price</h4>
+            <br />
+            <img src="@SportsEquipment.Img" />
+        </section>
     }
 
 </div>

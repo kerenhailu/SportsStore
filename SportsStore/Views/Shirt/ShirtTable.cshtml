@@ -1,9 +1,5 @@
 ﻿@using SportsStore.Models;
 
-
-<h2> Table of Shirt</h2>
-<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to change </button>
-
 <style>
     #TableShirt {
         width: 90%;
@@ -11,15 +7,17 @@
         margin-left: 10%;
         margin-bottom: 1%;
         padding: 10%;
-        margin:3%;
+        margin: 3%;
     }
+
     #TableShirt,
     th,
     td {
         text-align: center;
         border: 1px solid black;
-        background-color: rgb(245, 238, 230);
+        background-color: rgb(249, 228, 200);
     }
+
     #TableShirt,
     th {
         height: 50px;
@@ -29,12 +27,22 @@
             border: 3px solid black;
         }
 
-    @*button {
-        border:none;
-    }*@
+    button {
+        border: none;
+        background: rgb(249, 207, 147);
+        font-weight: bold;
+        font-size: large;
+    }
 </style>
 <h1>Shirts </h1>
-<div >
+<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">Card shirt </button>
+<button type="button" onclick="location.href = '@Url.Action("LongShirt","Shirt")'">Long Shirt </button>
+<button type="button" onclick="location.href = '@Url.Action("TShirt","Shirt")'">Short TShirt </button>
+<button type="button" onclick="location.href = '@Url.Action("DreyfitShirt","Shirt")'">Dreyfit Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("SortShirt","Shirt")'">Sort Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("MaleShirt","Shirt")'">Male Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("FemaleShirt","Shirt")'">Female Shirts </button>
+<div>
     <table id="TableShirt">
         <tr>
             <th>ClothModel</th>
@@ -57,12 +65,12 @@
                 <td> @shirt.IsDreyfit</td>
                 <td> @shirt.Gender</td>
                 <td><img src="@shirt.Img" width="100px" height="40px" /></td>
-<tr />
+            <tr />
         }
             <table />
 
     </div>
 
 
- 
+
 

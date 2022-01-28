@@ -29,13 +29,13 @@ namespace SportsStore.Controllers
         public ActionResult EquipmentFootball()
         {
             List<SportsEquipment> listSportsEquipment = dbContext.SportsEquipments.ToList();
-            List<SportsEquipment> listEquipmentFootball = dbContext.SportsEquipments.Where(item => item.sportType =="Football").ToList();
+            List<SportsEquipment> listEquipmentFootball = listSportsEquipment.Where(item => item.sportType == "football").ToList();
             return View(listEquipmentFootball);
         }
         public ActionResult EquipmentBasketball()
         {
             List<SportsEquipment> listSportsEquipment = dbContext.SportsEquipments.ToList();
-            List<SportsEquipment> EquipmentBasketball = dbContext.SportsEquipments.Where(item => item.sportType == "basketball").ToList();
+            List<SportsEquipment> EquipmentBasketball = listSportsEquipment.Where(item => item.sportType == "basketball").ToList();
             return View(EquipmentBasketball);
         }
         public ActionResult EquipmentSort()

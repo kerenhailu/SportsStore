@@ -30,20 +30,20 @@ namespace SportsStore.Controllers
         public ActionResult LongShirt()
         {
             List<Clothing> ListShirt = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            List<Clothing> ListLongShirt = dbContext.Clothings.Where(item => item.IsShort ==false ).ToList();
+            List<Clothing> ListLongShirt = ListShirt.Where(item => item.IsShort ==false ).ToList();
             return View(ListLongShirt);
         }
         
         public ActionResult TShirt()
         {
             List<Clothing> ListShirt = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            List<Clothing> ListTShirt = dbContext.Clothings.Where(item => item.IsShort == true).ToList();
+            List<Clothing> ListTShirt = ListShirt.Where(item => item.IsShort == true).ToList();
             return View(ListTShirt);
         }
         public ActionResult DreyfitShirt()
         {
             List<Clothing> ListShirt = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            List<Clothing> ListDreyfitShirt = dbContext.Clothings.Where(item => item.IsDreyfit == true).ToList();
+            List<Clothing> ListDreyfitShirt = ListShirt.Where(item => item.IsDreyfit == true).ToList();
             return View(ListDreyfitShirt);
         }
         public ActionResult SortShirt()
@@ -55,13 +55,13 @@ namespace SportsStore.Controllers
         public ActionResult FemaleShirt()
         {
             List<Clothing> ListShirt = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            List<Clothing> ListFemaleShirt = dbContext.Clothings.Where(item => item.Gender == "female").ToList();
+            List<Clothing> ListFemaleShirt = ListShirt.Where(item => item.Gender == "female").ToList();
             return View(ListFemaleShirt);
         }
         public ActionResult MaleShirt()
         {
             List<Clothing> ListShirt = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            List<Clothing> ListMaleShirt = dbContext.Clothings.Where(item => item.Gender == "male").ToList();
+            List<Clothing> ListMaleShirt = ListShirt.Where(item => item.Gender == "male").ToList();
             return View(ListMaleShirt);
         }
        

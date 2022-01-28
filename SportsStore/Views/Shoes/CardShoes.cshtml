@@ -1,7 +1,7 @@
 ﻿@using SportsStore.Models;
 
 
-<h2>AllTheShoes</h2>
+
 <style>
     body {
         background-color: rgb(238, 195, 115);
@@ -18,7 +18,7 @@
     #card {
         font-size: large;
         width: 40vh;
-        height: 60vh;
+        height: 50vh;
         box-shadow: 5px 5px 5px rgb(202, 150, 92);
         background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));
         margin: 2%;
@@ -44,20 +44,26 @@
             font-size: large;
             transition: 2s;
         }
+    #Title {
+        font-size: 50px;
+        text-shadow: 2px 2px 2px rgb(80, 79, 76);
+    }
             @*button:hover {
                 width: 5%;
                 height: 5%;
             }*@
 </style>
+<h1 id="Title">Shoes :</h1>
 <button type="button" onclick="location.href = '@Url.Action("TableShoes","Shoes")'">Show table </button>
 <div id="Divcard">
+    <br />
     @foreach (Shoe shoe in @Model)
     {
         <section id="card">
             <h4>ShoeType : @shoe.ShoeType</h4>
             <h4>Company : @shoe.Company</h4>
             <h4>Price : @shoe.Price</h4>
-             <img src="@shoe.Img" />
+            <img src="@shoe.Img" />
         </section>
     }
 

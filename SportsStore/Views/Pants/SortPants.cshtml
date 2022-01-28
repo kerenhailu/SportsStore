@@ -16,7 +16,7 @@
     #Card {
         font-size: large;
         width: 40vh;
-        height: 60vh;
+        height: 50vh;
         box-shadow: 5px 5px 5px rgb(202, 150, 92);
         background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));
         margin: 2%;
@@ -47,19 +47,26 @@
                 height: 5%;
             }*@
 </style>
-<button type="button" onclick="location.href = '@Url.Action("CardOfPants","Pants")'">click All Pants </button>
+<h1>Sort Pants</h1>
+<button type="button" onclick="location.href = '@Url.Action("CardOfPants","Pants")'">To Pants </button>
+<button type="button" onclick="location.href = '@Url.Action("TableOfPants","Pants")'"> To Table </button>
+<button type="button" onclick="location.href = '@Url.Action("LongPants","Pants")'"> To LongPants </button>
+<button type="button" onclick="location.href = '@Url.Action("shortPants","Pants")'"> To shortPants </button>
+<button type="button" onclick="location.href = '@Url.Action("DreyfitPants","Pants")'"> To DreyfitPants </button>
+<button type="button" onclick="location.href = '@Url.Action("FemalePants","Pants")'"> To FemalePants </button>
+<button type="button" onclick="location.href = '@Url.Action("MalePants","Pants")'"> To MalePants </button>
 
 <div id="DivCard">
     @foreach (Clothing pants in @Model)
     {
-    <section id="Card">
-        <br />
-        <h4>Type : @pants.ClothType</h4>
-        <h4>Company : @pants.Company</h4>
-        <h4>Price : @pants.Price</h4>
-        <br />
-        <img src="@pants.Img" />
-    </section>
+        <section id="Card">
+            <br />
+            <h4>Type : @pants.ClothType</h4>
+            <h4>Company : @pants.Company</h4>
+            <h4>Price : @pants.Price</h4>
+            <br />
+            <img src="@pants.Img" />
+        </section>
     }
 </div>
 

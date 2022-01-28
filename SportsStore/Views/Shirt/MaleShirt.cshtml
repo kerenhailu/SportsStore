@@ -47,11 +47,14 @@
             }*@
 </style>
 
-
-<h2>Sort</h2>
-
-<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to card </button>
 <h1>Shirt for the Mens </h1>
+<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">Shirt card </button>
+<button type="button" onclick="location.href = '@Url.Action("ShirtTable","Shirt")'">Shirt Table </button>
+<button type="button" onclick="location.href = '@Url.Action("LongShirt","Shirt")'">Long Shirt </button>
+<button type="button" onclick="location.href = '@Url.Action("TShirt","Shirt")'">Short TShirt </button>
+<button type="button" onclick="location.href = '@Url.Action("DreyfitShirt","Shirt")'">Dreyfit Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("SortShirt","Shirt")'">Sort Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("FemaleShirt","Shirt")'">Female Shirts </button>
 
 <div id="DivCard">
     @foreach (Clothing shirt in @Model)

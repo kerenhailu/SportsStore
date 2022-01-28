@@ -29,20 +29,20 @@ namespace SportsStore.Controllers
         public ActionResult LongPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            List<Clothing> ListLongPants = dbContext.Clothings.Where(item => item.IsShort == false).ToList();
+            List<Clothing> ListLongPants = ListPants.Where(item => item.IsShort == false).ToList();
             return View(ListLongPants);
         }
 
         public ActionResult shortPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            List<Clothing> ListshortPants = dbContext.Clothings.Where(item => item.IsShort == true).ToList();
+            List<Clothing> ListshortPants = ListPants.Where(item => item.IsShort == true).ToList();
             return View(ListshortPants);
         }
         public ActionResult DreyfitPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            List<Clothing> ListDreyfitPants = dbContext.Clothings.Where(item => item.IsDreyfit == true).ToList();
+            List<Clothing> ListDreyfitPants = ListPants.Where(item => item.IsDreyfit == true).ToList();
             return View(ListDreyfitPants);
         }
         public ActionResult SortPants()
@@ -51,6 +51,18 @@ namespace SportsStore.Controllers
             List<Clothing> ListPantsSort = ListPants.OrderBy(item => item.Price).ToList();
             ViewBag.SortPants = ListPantsSort;
             return View(ListPantsSort);
+        }
+        public ActionResult FemalePants()
+        {
+            List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
+            List<Clothing> ListFemalePants = ListPants.Where(item => item.Gender == "female").ToList();
+            return View(ListFemalePants);
+        }
+        public ActionResult MalePants()
+        {
+            List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
+            List<Clothing> ListMalePants = ListPants.Where(item => item.Gender == "male").ToList();
+            return View(ListMalePants);
         }
     }
 }

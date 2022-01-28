@@ -47,8 +47,15 @@
                 height: 5%;
             }*@
 </style>
-<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click All Shirt </button>
 <h1>shirt for the Ladies</h1>
+<button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">Card Shirt </button>
+<button type="button" onclick="location.href = '@Url.Action("ShirtTable","Shirt")'">Shirt Table </button>
+<button type="button" onclick="location.href = '@Url.Action("LongShirt","Shirt")'">Long Shirt </button>
+<button type="button" onclick="location.href = '@Url.Action("TShirt","Shirt")'">Short TShirt </button>
+<button type="button" onclick="location.href = '@Url.Action("DreyfitShirt","Shirt")'">Dreyfit Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("SortShirt","Shirt")'">Sort Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("MaleShirt","Shirt")'">Male Shirts </button>
+
 <div id="DivCard">
     @foreach (Clothing shirt in @Model)
     {
