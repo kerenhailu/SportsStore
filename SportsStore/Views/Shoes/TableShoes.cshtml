@@ -45,7 +45,7 @@
             <th>Img</th>
         </tr>
         <tr>
-            @foreach (Shoe shoe in @ViewBag.Shoes)
+            @foreach (Shoe shoe in @Model)
             {
                 <td>@shoe.ShoeType</td>
                 <td>@shoe.Company</td>

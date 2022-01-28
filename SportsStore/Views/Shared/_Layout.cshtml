@@ -31,6 +31,7 @@
         }*@
 </style>
 <body>
+   
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -38,26 +39,30 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+
+
                 </button>
+
+
                 @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
-                <a href="https://www.tech-career.org/"><img src="./img/WhatsApp Image 2021-11-07 at 16.55.36.jpeg" width="20px" height="20px" /></a>
+
                 @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Shirt", "ShirtCard", "Shirt", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Pants", "CardOfPants", "Pants", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Shoes", "CardShoes", "Shoes", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("SportsEquipment", "SportsEquipmentCard", "SportsEquipment", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <a href="https://www.tech-career.org/"><img src="." width="20px" height="20px" /></a>
-
 
             </div>
+            <a href="https://www.tech-career.org/"><img src="~/Image/לוגו טק קריירה.jpeg" width="40px" height="40px" /></a>
+            <a href="https://www.tech-career.org/"><img src="~/Image/לוגו יעקב.jpeg" width="40px" height="40px" /></a>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
                     @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                     @*<li>@Html.ActionLink("Shirt", "ShirtCard", "Shirt")</li>
-                        <li>@Html.ActionLink("Shoes", "AllTheShoes", "Shoes")</li>*@
+                <li>@Html.ActionLink("Shoes", "AllTheShoes", "Shoes")</li>*@
                 </ul>
             </div>
         </div>
@@ -72,13 +77,13 @@
                 |   <a style="color:black" href="https://www.linkedin.com/in/keren-hailu-58bb07218/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png" width="24px" height="24px" /> Linkedin</a>
                 | <a style="color:black" href="https://api.whatsapp.com/send?phone=9720543401404" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" width="24px" height="24px" />WhatsApp</a>
             </section>
-            
+
             @*<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
         </footer>
     </div>
 
     @*@Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)*@
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)*@
 </body>
 </html>

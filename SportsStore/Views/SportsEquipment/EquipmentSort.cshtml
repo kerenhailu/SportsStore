@@ -51,7 +51,7 @@
 </style>
 <button type="button" onclick="location.href = '@Url.Action("SportsEquipmentCard","SportsEquipment")'">Show Card </button>
 <div id="Divcard">
-    @foreach (SportsEquipment SportsEquipment in @ViewBag.EquipmentSort)
+    @foreach (SportsEquipment SportsEquipment in @Model)
     {
     <section id="card">
         <br />

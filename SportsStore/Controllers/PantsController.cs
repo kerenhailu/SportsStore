@@ -19,43 +19,38 @@ namespace SportsStore.Controllers
         public ActionResult TableOfPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            ViewBag.ListPants = ListPants;
-            return View();
+            return View(ListPants);
         }
         public ActionResult CardOfPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
-            ViewBag.ListPants = ListPants;
-            return View();
+            return View(ListPants);
         }
         public ActionResult LongPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
             List<Clothing> ListLongPants = dbContext.Clothings.Where(item => item.IsShort == false).ToList();
-            ViewBag.LongPants = ListLongPants;
-            return View();
+            return View(ListLongPants);
         }
 
         public ActionResult shortPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
             List<Clothing> ListshortPants = dbContext.Clothings.Where(item => item.IsShort == true).ToList();
-            ViewBag.shortPants = ListshortPants;
-            return View();
+            return View(ListshortPants);
         }
         public ActionResult DreyfitPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
             List<Clothing> ListDreyfitPants = dbContext.Clothings.Where(item => item.IsDreyfit == true).ToList();
-            ViewBag.DreyfitPants = ListDreyfitPants;
-            return View();
+            return View(ListDreyfitPants);
         }
         public ActionResult SortPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
             List<Clothing> ListPantsSort = ListPants.OrderBy(item => item.Price).ToList();
             ViewBag.SortPants = ListPantsSort;
-            return View();
+            return View(ListPantsSort);
         }
     }
 }

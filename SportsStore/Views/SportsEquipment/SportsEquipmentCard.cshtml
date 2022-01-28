@@ -54,7 +54,7 @@
 <button type="button" onclick="location.href = '@Url.Action("EquipmentFootball","SportsEquipment")'">click to SportsEquipment Football</button>
 <button type="button" onclick="location.href = '@Url.Action("EquipmentSort","SportsEquipment")'">click to Sort SportsEquipments </button>
 <div id="Divcard">
-    @foreach (SportsEquipment SportsEquipment in @ViewBag.SportsEquipment)
+    @foreach (SportsEquipment SportsEquipment in @Model)
     {
         <section id="card">
             <br />

@@ -46,7 +46,7 @@
         </tr>
         <tr>
 
-            @foreach (SportsEquipment SportsEquipment in @ViewBag.SportsEquipment)
+            @foreach (SportsEquipment SportsEquipment in @Model)
             {
                 <td>@SportsEquipment.ProductName</td>
                 <td>@SportsEquipment.sportType</td>

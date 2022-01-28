@@ -49,8 +49,9 @@
 </style>
 
 <button type="button" onclick="location.href = '@Url.Action("ShirtCard","Shirt")'">click to All the Card </button>
+<h1>Short T-Shirt</h1>
 <div id="DivCard">
-    @foreach (Clothing shirt in @ViewBag.TShirts)
+    @foreach (Clothing shirt in @Model)
     {
 
     <section id="Card">

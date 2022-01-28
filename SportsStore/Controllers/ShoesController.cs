@@ -18,14 +18,12 @@ namespace SportsStore.Controllers
         public ActionResult CardShoes()
         {
             List<Shoe> listShoes = dbContext.Shoes.ToList();
-            ViewBag.Shoes = listShoes;
-            return View();
+            return View(listShoes);
         }
         public ActionResult TableShoes()
         {
             List<Shoe> listShoes = dbContext.Shoes.ToList();
-            ViewBag.Shoes = listShoes;
-            return View();
+            return View(listShoes);
         }
         //public ActionResult CardShoesByInput()
         //{

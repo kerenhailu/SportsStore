@@ -51,7 +51,7 @@
 </style>
 <button type="button" onclick="location.href = '@Url.Action("TableShoes","Shoes")'">Show table </button>
 <div id="Divcard">
-    @foreach (Shoe shoe in @ViewBag.Shoes)
+    @foreach (Shoe shoe in @Model)
     {
         <section id="card">
             <h4>ShoeType : @shoe.ShoeType</h4>

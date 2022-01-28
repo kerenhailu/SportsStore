@@ -2,7 +2,7 @@
 <style>
     body {
         background-color: rgb(238, 195, 115);
-       
+
     }
 
     #DivCard {
@@ -49,38 +49,40 @@
 </style>
 
 
-<h2>Shirt Card</h2>
+<h2>Shirt </h2>
 
-<button type="button" onclick="location.href = '@Url.Action("ShirtTable","Shirt")'">click to Table </button>
-<button type="button" onclick="location.href = '@Url.Action("LongShirt","Shirt")'">click to LongShirt </button>
-<button type="button" onclick="location.href = '@Url.Action("TShirt","Shirt")'">click to TShirt </button>
-<button type="button" onclick="location.href = '@Url.Action("DreyfitShirt","Shirt")'">click to DreyfitShirts </button>
-<button type="button" onclick="location.href = '@Url.Action("SortShirt","Shirt")'">click to Sort Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("ShirtTable","Shirt")'">Shirt Table </button>
+<button type="button" onclick="location.href = '@Url.Action("LongShirt","Shirt")'">Long Shirt </button>
+<button type="button" onclick="location.href = '@Url.Action("TShirt","Shirt")'">Short TShirt </button>
+<button type="button" onclick="location.href = '@Url.Action("DreyfitShirt","Shirt")'">Dreyfit Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("SortShirt","Shirt")'">Sort Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("MaleShirt","Shirt")'">Male Shirts </button>
+<button type="button" onclick="location.href = '@Url.Action("FemaleShirt","Shirt")'">Female Shirts </button>
 
-<select id="shirts">
-    <option class="option" value="card">card</coption>
-    <option value="longShirt">longShirt</option>
-    <option value="DreyfitShirts">DreyfitShirts</option>
-    <option value="sort">sort</option>
-    <option value="table">table</option>
-</select>
+@*<select id="shirts">
+        <option class="option" value="card">card</coption>
+        <option value="longShirt">longShirt</option>
+        <option value="DreyfitShirts">DreyfitShirts</option>
+        <option value="sort">sort</option>
+        <option value="table">table</option>
+    </select>*@
 
 
 @*@switch ()
-{
-    case "card" :
-        <h1>card</h1>
-        break;
-    case "longShirt":
-        <h1>longg</h1>
-    case "DreyfitShirts":
-<h1>DreyfitShirts</h1>
-        break;
-    default:
-<h1>aaaa</h1>
-        break;
+    {
+        case "card" :
+            <h1>card</h1>
+            break;
+        case "longShirt":
+            <h1>longg</h1>
+        case "DreyfitShirts":
+    <h1>DreyfitShirts</h1>
+            break;
+        default:
+    <h1>aaaa</h1>
+            break;
 
-}*@
+    }*@
 
 <div id="DivCard">
     @foreach (Clothing shirt in @Model)

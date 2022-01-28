@@ -33,6 +33,7 @@
         border:none;
     }*@
 </style>
+<h1>Shirts </h1>
 <div >
     <table id="TableShirt">
         <tr>
@@ -46,7 +47,7 @@
             <th>Img</th>
         </tr>
         <tr>
-            @foreach (Clothing shirt in @ViewBag.ListShirt)
+            @foreach (Clothing shirt in @Model)
             {
                 <td>@shirt.ClothModel</td>
                 <td> @shirt.Company</td>

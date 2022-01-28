@@ -169,6 +169,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\Sportt.png" />
+    <Content Include="Image\לוגו טק קריירה.jpeg" />
+    <Content Include="Image\לוגו יעקב.jpeg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Models\StoreDbContext.dbml">
@@ -223,6 +226,8 @@
     <Content Include="Views\SportsEquipment\EquipmentFootball.cshtml" />
     <Content Include="Views\SportsEquipment\EquipmentBasketball.cshtml" />
     <Content Include="Views\SportsEquipment\EquipmentSort.cshtml" />
+    <Content Include="Views\Shirt\FemaleShirt.cshtml" />
+    <Content Include="Views\Shirt\MaleShirt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
