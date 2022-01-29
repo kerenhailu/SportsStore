@@ -169,6 +169,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\gif shirt.gif" />
+    <Content Include="Image\gif shoes.gif" />
+    <Content Include="Image\gifff pants.gif" />
     <Content Include="Image\GiffMan.gif" />
     <Content Include="Image\SportGiff.gif" />
     <Content Include="Image\Sportt.png" />
@@ -234,6 +237,7 @@
     <Content Include="Views\Pants\FemalePants.cshtml" />
     <Content Include="Views\Pants\MalePants.cshtml" />
     <Content Include="Views\Shoes\SaleShoes.cshtml" />
+    <Content Include="Views\Shoes\SortShoes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

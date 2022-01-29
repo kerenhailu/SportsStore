@@ -31,5 +31,11 @@ namespace SportsStore.Controllers
             List<Shoe> SaleShoes = listShoes.Where(item => item.IsSale == true).ToList();
             return View(SaleShoes);
         }
+        public ActionResult SortShoes()
+        {
+            List<Shoe> listShoes = dbContext.Shoes.ToList();
+            List<Shoe> ListShoesSort = listShoes.OrderBy(item => item.Price).ToList();
+            return View(ListShoesSort);
+        }
     }
 }

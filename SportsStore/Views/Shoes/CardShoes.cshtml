@@ -51,9 +51,11 @@
                 height: 5%;
             }*@
 </style>
+<br />
 <h1 id="Title">Shoes :</h1>
 <button type="button" onclick="location.href = '@Url.Action("TableShoes","Shoes")'">Show table </button>
 <button type="button" onclick="location.href = '@Url.Action("SaleShoes","Shoes")'">Show Sale Shoes </button>
+<button type="button" onclick="location.href = '@Url.Action("SortShoes","Shoes")'">Show Sort Shoes </button>
 <div id="Divcard">
     <br />
     @foreach (Shoe shoe in @Model)
