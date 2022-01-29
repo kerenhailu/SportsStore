@@ -19,7 +19,7 @@ namespace SportsStore.Controllers
 
             return View();
         }
-
+        
         public ActionResult Contact()
         {
             ViewBag.Message = "Contact : ";
