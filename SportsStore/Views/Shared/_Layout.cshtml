@@ -13,6 +13,7 @@
     }*@
     body {
         background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));
+
     }
     footer {
         @*background: linear-gradient(rgb(244, 223, 186),rgb(238, 195, 115),rgb(202, 150, 92));*@
@@ -22,6 +23,18 @@
         font-size: 23px;
 
     }
+    #navbarLink {
+        text-align: center;
+        font-weight: bold;
+        font-size: 100px;
+    
+    }
+    @*#logoTech{
+margin-left:50%
+    }
+    #logoYacov {
+        margin-right: 50%
+    }*@
     @*#SecOfFooter a {
         transition: 2s;
     }
@@ -31,8 +44,10 @@
         }*@
 </style>
 <body>
-   
+
     <div class="navbar navbar-inverse navbar-fixed-top">
+            <a href="https://www.tech-career.org/"><img id="logoTech" src="~/Image/לוגו טק קריירה.jpeg" width="50px" height="40px" /></a>
+            <a href="https://www.tech-career.org/"><img id="logoYacov" src="~/Image/לוגו יעקב.jpeg" width="50px" height="40px" /></a>
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -42,27 +57,26 @@
 
 
                 </button>
+                <div id="navbarLink">
 
+                    @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
 
-                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
-
-                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Shirt", "ShirtCard", "Shirt", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Pants", "CardOfPants", "Pants", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Shoes", "CardShoes", "Shoes", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("SportsEquipment", "SportsEquipmentCard", "SportsEquipment", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
-
+                    @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Shirt", "ShirtCard", "Shirt", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Pants", "CardOfPants", "Pants", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Shoes", "CardShoes", "Shoes", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("SportsEquipment", "SportsEquipmentCard", "SportsEquipment", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
             </div>
-            <a href="https://www.tech-career.org/"><img src="~/Image/לוגו טק קריירה.jpeg" width="40px" height="40px" /></a>
-            <a href="https://www.tech-career.org/"><img src="~/Image/לוגו יעקב.jpeg" width="40px" height="40px" /></a>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
                     @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                     @*<li>@Html.ActionLink("Shirt", "ShirtCard", "Shirt")</li>
-                <li>@Html.ActionLink("Shoes", "AllTheShoes", "Shoes")</li>*@
+                        <li>@Html.ActionLink("Shoes", "AllTheShoes", "Shoes")</li>*@
                 </ul>
             </div>
         </div>

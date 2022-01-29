@@ -25,11 +25,11 @@ namespace SportsStore.Controllers
             List<Shoe> listShoes = dbContext.Shoes.ToList();
             return View(listShoes);
         }
-        //public ActionResult CardShoesByInput()
-        //{
-        //    List<Shoe> listShoes = dbContext.Shoes.ToList();
-        //    ViewBag.Shoes = listShoes;
-        //    return View();
-        //}
+        public ActionResult SaleShoes()
+        {
+            List<Shoe> listShoes = dbContext.Shoes.ToList();
+            List<Shoe> SaleShoes = listShoes.Where(item => item.IsSale == true).ToList();
+            return View(SaleShoes);
+        }
     }
 }

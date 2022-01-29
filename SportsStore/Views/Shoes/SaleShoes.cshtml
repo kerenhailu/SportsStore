@@ -1,5 +1,7 @@
 ﻿@using SportsStore.Models;
 
+
+
 <style>
     body {
         background-color: rgb(238, 195, 115);
@@ -51,9 +53,9 @@
                 height: 5%;
             }*@
 </style>
-<h1 id="Title">Shoes :</h1>
+<h1 id="Title">Sale Shoes :</h1>
 <button type="button" onclick="location.href = '@Url.Action("TableShoes","Shoes")'">Show table </button>
-<button type="button" onclick="location.href = '@Url.Action("SaleShoes","Shoes")'">Show Sale Shoes </button>
+<button type="button" onclick="location.href = '@Url.Action("CardShoes","Shoes")'">Show All Shoes </button>
 <div id="Divcard">
     <br />
     @foreach (Shoe shoe in @Model)
