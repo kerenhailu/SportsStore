@@ -12,10 +12,7 @@ namespace SportsStore.Controllers
         StoreDbContextDataContext dbContext = new StoreDbContextDataContext();
         string g = "football";
         // GET: SportsEquipment
-        public ActionResult Index()
-        {
-            return View();
-        }
+
         public ActionResult SportsEquipmentCard()
         {
             List<SportsEquipment> listSportsEquipment = dbContext.SportsEquipments.ToList();

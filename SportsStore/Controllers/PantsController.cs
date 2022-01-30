@@ -12,10 +12,7 @@ namespace SportsStore.Controllers
         StoreDbContextDataContext dbContext = new StoreDbContextDataContext();
         string TypeOfTheCloth = "pants";
         // GET: Pants
-        public ActionResult Index()
-        {
-            return View();
-        }
+        
         public ActionResult TableOfPants()
         {
             List<Clothing> ListPants = dbContext.Clothings.Where(item => item.ClothType == TypeOfTheCloth).ToList();
